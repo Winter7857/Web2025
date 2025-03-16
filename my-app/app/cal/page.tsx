@@ -14,8 +14,8 @@ export default function Calculator() {
     const [operator, setOperator] = useState('')
     const [total, setTotal] = useState(0) 
 
-    function cal(e: React.ChangeEvent<HTMLButtonElement>) {
-        const value: number = +e.target.value; 
+    function cal(e: React.MouseEvent<HTMLButtonElement>) {
+        const value: number = +e.currentTarget.value; 
         switch (operator) {
             case '+':
                 setTotal(total + value)
